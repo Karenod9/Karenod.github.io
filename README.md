@@ -2,7 +2,7 @@
 
 As part of Web Design & Client Side Scripting module at NCI, I completed the following project. 
 
-# You have been contracted to design the order page for a pizza companies new website. When ordering online, the customer should provide:
+# Order page for a pizza companies new website. When ordering online, the customer should provide:
 
 Username and password (password must be 7 characters in length)
 
