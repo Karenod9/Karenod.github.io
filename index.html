@@ -1,0 +1,111 @@
+<!-- Create an online order form for a pizza company - CA Web Design & Client Side Scripting 
+	
+-->
+<html lang="en"> 
+	<head>
+		  
+		<title>Order Page</title>
+		
+		<link rel ="stylesheet" href="external.css">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="external.js"></script>
+						
+		<meta charset="UTF-8">
+						
+		<!--[if lt IE 9]>
+		<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+		<![endif]-->
+		
+	</head>
+	
+	<body>
+	
+<!--====================================================================================================================================
+																	HEADER
+======================================================================================================================================-->		
+	
+		<div id="header">
+			<h1> Welcome to <br/> <i><span id="font">Jamie's <br/>Pizza Place</span> </i> <br/> order page! </h1>
+		</div>
+		
+<!--====================================================================================================================================
+																	FORM- LOGIN
+======================================================================================================================================-->		
+		<div class="form">
+			<form name="logIn" id= "logIn" >
+				<span class="title"><strong class="num"> ONE: </strong>Sign-In to start your order:</span>
+					<table class="tab">
+						<tr>
+							<td> Username: </td>
+							<td><input id="user" type="text" required title="Please enter a valid username" name="username"  size="15" maxlength="20"/></td>
+						</tr>	
+						<tr>
+							<td> Password: </td>
+							<td><input type="password" name="password" size="15" required pattern=".{7,7}" title="Password must be 7 characters in length" maxlength="7"/></td>
+						</tr>
+					
+					</table>
+					<div class="buttons"> <input type="submit" value="Sign in" id="signIn"> </div>
+				
+			</form>
+		</div>
+<!--====================================================================================================================================
+																	FORM- ORDER
+======================================================================================================================================-->		
+		
+		<div class="form" id="order">	
+			<form name="order">
+				<span class="title"><strong class="num"> TWO: </strong> Choose your pizza:</span>
+					<table class="tab">
+						<tr>
+							<td> Pizza flavour? </td>
+							<td><input type="radio" name="flavour" value="pepperoni"/> Pepperoni <br />
+							<input type="radio" name="flavour" value="cheese"/> Cheese 
+							</td>
+						</tr>
+			
+						<tr>
+							<td> Pizza size? </td>		
+							<td>
+								<div class="selectFormat"> 
+								<div class= "select">
+									<select id="selectPizza" onchange="choiceSuper(this)" name="size" required">
+										<option value="None">Choose pizza</option>
+										<option value="large" id="large">Large (€5)</option>
+										<option value="extra"id="extra">Extra-Large (€7)</option>
+										<option value="super" id="super">Supersize (€17) </option> 							
+									</select> 
+								</div>
+								</div>
+							</td>
+						</tr>
+						<tr>
+							<div class="amount">
+							<td> How many pizzas? </td>
+							<td><input  type="number" id="qty" name="quantity" size="3" min="1" max="100" maxlength="3"/></td>
+							</div>
+						</tr>
+						<tr>
+							<td> Discount code: </td>
+							<td><input  type="text" id="disc" name="discount" size="11" maxlength="11"/></td>
+						</tr>
+						<tr> 
+							<td>Total Price: </td>
+							<td id="totalPrice"><input type="text" id="totals" name="totalCost" size="5" readonly="readonly" </td>
+						</tr>	
+					</table>
+				<div class="buttons"> <input type="button" id='submit' value="Proceed" onClick="calculation()"/> </div>	
+			</form>
+		</div>
+		
+<!--====================================================================================================================================
+																	FOOTER
+======================================================================================================================================-->
+
+		<div id="cite">	
+			Image by <a href="https://pixabay.com/users/engin_akyurt-3656355/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2780424">Engin Akyurt</a> from <a href="https://pixabay.com/?utm_source=link-attribution&amp;utm_medium=referral&amp;utm_campaign=image&amp;utm_content=2780424">Pixabay</a>
+		</div>
+	
+	</body>
+
+</html>
